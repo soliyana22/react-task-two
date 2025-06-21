@@ -71,7 +71,7 @@ const Footer = () => {
             <FontAwesomeIcon icon={faPinterest} className="social-icon" />
           </div>
           
-          <h2 className="footer-heading footer-heading-comments">COMMENTS</h2>
+          
         </div>
       </div>
     </footer>
