@@ -37,7 +37,7 @@ body {
   height: auto;
   max-height: 500px;
   object-fit: cover;
-  border-radius: 8px;
+  
 }
 
 .landing-about-section {
@@ -63,7 +63,7 @@ body {
   width: 100%;
   height: auto;
   object-fit: cover;
-  border-radius: 8px;
+ 
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -169,7 +169,7 @@ body {
 .project-container {
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
+  
 }
 
 .project-image {
