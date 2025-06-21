@@ -56,6 +56,9 @@ button:focus-visible {
 footer{
   background-color: black;
 }
+nav{
+  display:flex;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

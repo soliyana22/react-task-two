@@ -21,7 +21,10 @@ export const Photo_Gallery = () => {
   return (
    
     <div className="photo-gallery">
-      <h1>Photo Gallery</h1>
+      <div className='header'>
+      <h1 className='first_header'>Photo </h1>
+      <h1>Gallery</h1>
+      </div><br/>
       <div className="gallery-grid">
         {images.map((image) => (
           <div key={image.id} className="gallery-item">
@@ -45,16 +48,5 @@ export const Photo_Gallery = () => {
     </div>
   )
 }
-// import React from 'react'
 
-
-// const Photo_Gallery = () => {
- 
-
-//   return (
-    
-//   );
-// };
-
-// export default Photo_Gallery;
 

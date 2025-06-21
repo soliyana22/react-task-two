@@ -1,7 +1,56 @@
 import React from 'react'
-
+import './Our_project.css'
 export const Our_project = () => {
   return (
-    <div>Our_project</div>
+    <section className="our-projects-section">
+      <h2 className="our-projects-title"><span>Our</span> Projects</h2>
+
+      <div className="project-item">
+        <img src="../assets/images/project_1.png" alt="Project 1" className="project-img" />
+        <div className="project-info">
+          <h3>Sample Project</h3>
+          <p>
+            Lorem ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          </p>
+          <button className="view-more-btn">View More →</button>
+        </div>
+      </div>
+
+      <div className="project-item">
+        <img src="../assets/images/project_2.png" alt="Project 2" className="project-img" />
+        <div className="project-info">
+          <h3>Sample Project 2</h3>
+          <p>
+            Lorem ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          </p>
+          <button className="view-more-btn">View More →</button>
+        </div>
+      </div>
+
+      <div className="project-item">
+        <img src="../assets/images/project_3.png" alt="Project 3" className="project-img" />
+        <div className="project-info">
+          <h3>Sample Project 3</h3>
+          <p>
+            Lorem ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          </p>
+          <button className="view-more-btn">View More →</button>
+        </div>
+      </div>
+
+      <div className="pagination">
+        <span className="page-number">0</span>
+        <span className="slash">/</span>
+        <span className="total-pages">05</span>
+        <button className="pagination-btn" disabled>←</button>
+        <button className="pagination-btn" disabled>→</button>
+      </div>
+    </section>
   )
 }
