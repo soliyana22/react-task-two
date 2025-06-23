@@ -2,10 +2,10 @@ import React from 'react'
 import './PhotoGallery.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faArrowLeft,faArrowRight} from '@fortawesome/free-solid-svg-icons';
-import './footer'
+
 export const Photo_Gallery = () => {
    const images = [
-    { id: 1, alt: "Nature", src: "../assets/images/gallery_1.jpg" },
+    { id: 1, alt: "Nature", src: "../assets/images/gallery_0.png" },
     { id: 1, alt: "Nature", src: "../assets/images/gallery_1.jpg" },
     { id: 2, alt: "Mountains", src: "../assets/images/gallery_2.jpg" },
     { id: 3, alt: "Ocean", src: "../assets/images/gallery_3.jpg" },
@@ -22,9 +22,9 @@ export const Photo_Gallery = () => {
    
     <div className="photo-gallery">
       <div className='header'>
-      <h1 className='first_header'>Photo </h1>
-      <h1>Gallery</h1>
-      </div><br/>
+      <h1 className="first_header">Photo</h1><br/>
+      <h1 className="second_header">Gallery</h1>
+      </div>
       <div className="gallery-grid">
         {images.map((image) => (
           <div key={image.id} className="gallery-item">
@@ -36,15 +36,19 @@ export const Photo_Gallery = () => {
           </div>
         ))}
       </div>
+     <div className='lower_gallery'>
+      <div className='number_text'>
+                <p>0 <br/>1</p>
+                <p className='slash'>/</p>
+                <p>05</p>
+              </div>    
+      <div className='arrow_btn'>
+            <button className='arrow_1'>←</button>
+            <button className='arrow_2'>→</button>
+            </div>
+            
      
-      <button className="icon-btn">
-                    <FontAwesomeIcon icon={faArrowLeft} />
-                  </button>
-                  <button className="icon-btn">
-                    <FontAwesomeIcon icon={faArrowRight} />
-                  </button>
-                 
-     
+     </div>
     </div>
   )
 }

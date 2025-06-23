@@ -24,6 +24,38 @@ body {
   font-size: 2.5rem;
   font-weight: 300;
 }
+.arrow_btn{
+  display: flex;
+  justify-content: center;
+  border:none;
+  margin-top: 6rem;
+ 
+}
+
+.landing-title .number_text{
+  display: flex;
+  gap:3rem;
+  justify-content: center;
+  font-size: small;
+  line-height: 2.5rem;
+
+}
+.number_text p{
+  font-size: 10px;
+  font-weight:none;
+  margin-top: 5rem;
+}
+.arrow_1,.arrow_2{
+ background-color: #F2F2F2;
+ border:2px solid  #F9F9F9;
+ color:black;
+ margin:10px;
+ border-radius: 1px;
+}
+.arrow_1{
+  background-color: white;
+}
+
 
 .landing-header {
   display: flex;
@@ -33,12 +65,32 @@ body {
 }
 
 .landing_1 img {
+  position: relative;
   width: 100%;
   height: auto;
-  max-height: 500px;
+  max-height: 580px;
   object-fit: cover;
   
 }
+.landing_btn_1 button{
+  position:absolute;
+  background-color: white;
+  color:black;
+  border:none;
+ bottom:2rem;
+ padding:1.5rem 3rem;
+}
+.landing-about-img_3 {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  
+  transform: scaleY(1.3);
+  margin-top: 5rem;    
+}
+
 
 .landing-about-section {
   display: flex;
@@ -71,6 +123,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  background-color: #FBFBFB;
 }
 
 .landing-about-title {
@@ -86,9 +139,9 @@ body {
 }
 
 .landing-about-btn {
-  padding: 0.8rem 1.5rem;
-  border: 1px solid #ddd;
-  background: #fff;
+  padding: 1.5rem 3rem;
+
+  background: white;
   color: #333;
   cursor: pointer;
   font-weight: 500;
@@ -96,6 +149,7 @@ body {
   border-radius: 4px;
   transition: all 0.3s ease;
   align-self: flex-start;
+  margin-top: 3rem; 
 }
 
 .landing-about-btn:hover {
@@ -104,41 +158,51 @@ body {
 }
 
 .landing-mission {
-  padding: 2rem 0;
+  padding: 2rem;
+  max-width: 1200px;
+  
+
 }
 
 .landing-mission-title {
-  font-size: 1.8rem;
-  color: #BDBDBD;
-  margin-bottom: 1.5rem;
+  font-size: 64px;
+  color: #ccc;
+  margin-bottom: 2rem;
   font-weight: 300;
+  text-align: left;
+ 
 }
 
 .landing-mission-points {
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  justify-content: space-between;
+  gap: 4rem;
+  width:100%;
 }
 
 .landing-mission-point {
   display: flex;
-  gap: 1rem;
   align-items: flex-start;
+  flex: 1;
+  position: relative;
 }
 
 .landing-mission-number {
-  font-size: 3rem;
-  color: #f0f0f0;
+  font-size: 8rem;
+  color: #f2f2f2;
   font-weight: bold;
   line-height: 1;
+  margin-right: 1rem;
+  flex-shrink: 0;
 }
 
 .landing-mission-text {
   font-size: 1rem;
-  color: #333;
   line-height: 1.6;
-  padding-top: 0.5rem;
+  color: #333;
+  max-width: 300px;
 }
+
 
 .projects-section {
   padding: 2rem 0;
@@ -150,7 +214,9 @@ body {
   font-weight: 300;
   color: #999;
   margin-bottom: 1.5rem;
+  text-align: left;  
 }
+
 
 .projects-grid {
   display: grid;
@@ -166,19 +232,19 @@ body {
   grid-template-columns: 1fr;
 }
 
+/* Ensure container is positioned for overlay */
 .project-container {
   position: relative;
   overflow: hidden;
-  
 }
 
 .project-image {
   width: 100%;
-  height: 250px;
-  object-fit: cover;
+  height: auto;
   display: block;
 }
 
+/* Overlay hidden by default */
 .overlay {
   position: absolute;
   inset: 0;
@@ -188,31 +254,52 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   text-align: center;
-}
 
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
 .overlay-title {
-  font-size: 1.5rem;
+  font-size: 4rem;
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  line-height: 4rem;
+  margin-left: 4rem;
 }
 
 .overlay-button {
   background: none;
   border: none;
   color: white;
-  border-bottom: 1px solid white;
   padding: 0;
   font-size: 0.9rem;
   cursor: pointer;
   transition: color 0.3s;
+  margin-left: 4rem;
 }
+
+/* Show overlay on image hover */
+.project-container:hover .overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+
 
 .overlay-button:hover {
   color: #ccc;
 }
-
+.project-container:hover .project-image {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}.project-container:hover .overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
 .projects-footer {
   display: flex;
   justify-content: center;
@@ -222,13 +309,16 @@ body {
 .all-projects-button {
   background-color: #222;
   color: white;
-  padding: 0.75rem 1.5rem;
+  padding: 1.5rem 2rem;
   font-size: 0.875rem;
   text-transform: uppercase;
   cursor: pointer;
   border: none;
   transition: background-color 0.3s;
-  border-radius: 4px;
+  border-radius: 1px;
+  float:left;
+  margin-left: 60rem;
+  
 }
 
 .all-projects-button:hover {
@@ -238,12 +328,15 @@ body {
 .contact-section {
   padding: 2rem 0;
 }
+.contact-container{
+  width:100%;
+}
 
 .contact-title {
-  font-size: 1.8rem;
-  font-weight: 300;
+  font-size: 600px;
   color: #999;
   margin-bottom: 1.5rem;
+  text-align: left;
 }
 
 .contact-content {
@@ -256,6 +349,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  width:50%;
 }
 
 .contact-form input,
@@ -277,6 +371,7 @@ body {
 .contact-image {
   display: flex;
   justify-content: center;
+  width:50%;
 }
 
 .contact-image img {
@@ -284,20 +379,22 @@ body {
   max-width: 600px;
   height: auto;
   object-fit: cover;
-  border-radius: 8px;
+ 
 }
 
 .contact-button {
   background-color: #222;
   color: white;
-  padding: 1rem 2rem;
-  font-size: 0.875rem;
+  padding: 3rem 5rem;
+  font-size: 0.0255rem;
   text-transform: uppercase;
   cursor: pointer;
   border: none;
   transition: background-color 0.3s;
-  border-radius: 4px;
+  border-radius: 1px;
   align-self: flex-start;
+  transform: scale(1.2);
+  margin-left: 1.75rem;
 }
 
 .contact-button:hover {
@@ -321,6 +418,7 @@ body {
   
   .landing-about-section {
     flex-direction: row;
+    background-color: #FBFBFB;
   }
   
   .landing-about-images {
@@ -344,17 +442,23 @@ body {
     grid-template-columns: repeat(3, 1fr);
   }
   
-  .contact-content {
-    flex-direction: row;
-  }
-  
-  .contact-form {
-    flex: 1;
-  }
-  
-  .contact-image {
-    flex: 1;
-  }
+ .contact-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; 
+}
+
+.contact-form {
+  flex: 0 0 30%;  
+
+}
+
+.contact-image {
+  flex: 0 0 70%;  
+  width:100%;
+  margin-bottom: 6rem;
+}
+
 }
 
 /* Media Queries for Desktop */
@@ -368,16 +472,18 @@ body {
   }
   
   .landing-mission-title {
-    font-size: 2.5rem;
+    font-size: 64px;
   }
   
   .projects-title, 
   .contact-title {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    justify-content: flex-start;
   }
   
   .landing-about-text,
   .landing-mission-text {
-    font-size: 1.1rem;
+    font-size: 1.02rem;
+    text-align: justify;
   }
 }

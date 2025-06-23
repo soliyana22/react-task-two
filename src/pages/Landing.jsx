@@ -10,11 +10,27 @@ export const Landing = () => {
           <div className="landing-title">
             <p>PROJECT</p>
             <h1>Lorum</h1>
+            <div className='arrow_btn'>
+            <button className='arrow_1'>←</button>
+            <button className='arrow_2'>→</button>
+            </div>
+          
+              <div className='number_text'>
+                <p>0 <br/>1</p>
+                <p className='slash'>/</p>
+                <p>02</p>
+              </div>
+          
           </div>
           <div className='landing_1'>
             <img src="../assets/images/Landing_1.jpg" alt="Landing header" />
           </div>
         </div>
+         <div className='landing_btn_1'>
+            
+            <button>VIEW MORE → </button>
+          </div>
+        
         
         {/* About Section */}
         <div className="landing-about-section">
@@ -24,7 +40,7 @@ export const Landing = () => {
               <img src="../assets/images/Landing_4.jpg" alt="Thumbnail 2" className="landing-about-img landing-about-img_2" />
             </div>
             <div className="landing-about-col">
-              <img src="../assets/images/Landing_2.jpg" alt="Thumbnail 3" className="landing-about-img" />
+              <img src="../assets/images/Landing_2.jpg" alt="Thumbnail 3" className="landing-about-img_3" />
             </div>
           </div>
 
@@ -63,47 +79,66 @@ export const Landing = () => {
           </div>
         </div>
         
-        {/* Projects Section */}
+     
         <section className="projects-section">
           <h2 className="projects-title">Our Projects</h2>
 
-          {/* First row - 2 projects */}
+         
           <div className="projects-grid top-row">
             <div className="project-container">
-              <img src="../assets/images/landing_5.png" alt="Sample Project" className="project-image" />
+              <img src="../assets/images/landing_new_2.png" alt="Sample Project" className="project-image" />
               <div className="overlay">
-                <h3 className="overlay-title">Sample Project</h3>
+                <h3 className="overlay-title">Sample <br/>Project</h3>
                 <button className="overlay-button">VIEW MORE →</button>
               </div>
             </div>
 
             <div className="project-container">
               <img src="../assets/images/landing_5.png" alt="Project 1" className="project-image" />
+              <div className="overlay">
+                <h3 className="overlay-title">Sample <br/>Project</h3>
+                <button className="overlay-button">VIEW MORE →</button>
+              </div>
             </div>
           </div>
 
-          {/* Second row - 3 projects */}
+         
           <div className="projects-grid bottom-row">
             <div className="project-container">
-              <img src="../assets/images/landing_6.png" alt="Project 2" className="project-image" />
+              <img src="../assets/images/landing_3_new.png" alt="Project 2" className="project-image" />
+              <div className="overlay">
+                <h3 className="overlay-title">Sample <br/>Project</h3>
+                <button className="overlay-button">VIEW MORE →</button>
+              </div>
+              
             </div>
             <div className="project-container">
               <img src="../assets/images/landing_7.png" alt="Project 3" className="project-image" />
+              <div className="overlay">
+                <h3 className="overlay-title">Sample <br/>Project</h3>
+                <button className="overlay-button">VIEW MORE →</button>
+              </div>
+
             </div>
             <div className="project-container">
               <img src="../assets/images/landing_8.png" alt="Project 4" className="project-image" />
+              <div className="overlay">
+                <h3 className="overlay-title">Sample <br/>Project</h3>
+                <button className="overlay-button">VIEW MORE →</button>
+              </div>
             </div>
           </div>
 
           {/* Footer Button */}
           <div className="projects-footer">
-            <button className="all-projects-button">ALL PROJECTS →</button>
+            <button className="all-projects-button">ALL PROJECTS  →</button>
           </div>
         </section>
         
         {/* Contact Section */}
         <section className="contact-section">
-          <h2 className="contact-title">Contact Us</h2>
+          <div className='contact-container'>
+          <p className="contact-title">Contact Us</p>
           <div className="contact-content">
             <form className="contact-form">
               <input type="text" placeholder="Name" />
@@ -117,8 +152,9 @@ export const Landing = () => {
               <img src="../assets/images/contact_us.jpg" alt="Contact" />
             </div>
           </div>
+          </div>
         </section>
       </div>
-    </div>
+ </div>
   );
 };

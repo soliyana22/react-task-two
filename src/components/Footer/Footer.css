@@ -1,20 +1,32 @@
-/* footer.css */
+
+
+
+
+
 .footer {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
   background-color: #222;
   color: #fff;
   padding: 50px 20px;
-  width: 100%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  z-index: 10;
+  align-items: flex-end;
 }
 
+
 .footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
 }
-
 .footer-column {
   display: flex;
   flex-direction: column;

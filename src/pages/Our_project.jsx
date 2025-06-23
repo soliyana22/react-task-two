@@ -3,7 +3,7 @@ import './Our_project.css'
 export const Our_project = () => {
   return (
     <section className="our-projects-section">
-      <h2 className="our-projects-title"><span>Our</span> Projects</h2>
+      <h2 className="our-projects-title"><span>Our<br/></span> Projects</h2>
 
       <div className="project-item">
         <img src="../assets/images/project_1.png" alt="Project 1" className="project-img" />

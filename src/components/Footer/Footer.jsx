@@ -11,9 +11,9 @@ import {
   faLinkedin,
   faPinterest 
 } from '@fortawesome/free-brands-svg-icons';
-import './footer.css';
+import './Footer.css';
 
-const Footer = () => {
+export const Footer = () =>  {
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -25,9 +25,7 @@ const Footer = () => {
               className="footer-logo"
             />
           </div>
-          <div className="copyright">
-            © 2021 All Rights Reserved
-          </div>
+          
         </div>
         
         <div className="footer-column">
@@ -73,9 +71,11 @@ const Footer = () => {
           
           
         </div>
-      </div>
+      </div><hr/>
+      <div className="copyright">
+            © 2021 All Rights Reserved
+          </div>
     </footer>
   );
 };
 
-export default Footer;
