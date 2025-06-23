@@ -487,3 +487,59 @@ body {
     text-align: justify;
   }
 }
+@media (max-width: 768px) {
+  /* Stack header section vertically */
+  .landing-header {
+    flex-direction: column !important;
+    gap: 2rem;
+  }
+
+  /* Stack mission points */
+  .landing-mission-points {
+    flex-direction: column !important;
+    gap: 2rem;
+  }
+
+  /* Stack about section */
+  .landing-about-section {
+    flex-direction: column !important;
+    gap: 2rem;
+  }
+
+  /* Stack contact section */
+  .contact-content {
+    flex-direction: column !important;
+    gap: 2rem;
+  }
+
+  /* Full width images on smaller screens */
+  .landing_1 img,
+  .landing-about-image,
+  .contact-image img {
+    width: 100% !important;
+    height: auto;
+    max-height: none;
+    object-fit: cover;
+  }
+
+  /* Adjust project grids */
+  .top-row,
+  .bottom-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Fix wide buttons */
+  .landing_btn_1 button,
+  .all-projects-button,
+  .contact-button {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* Padding/margins for better spacing */
+  .container {
+    padding: 0 1rem;
+  }
+}
