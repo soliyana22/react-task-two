@@ -1,8 +1,9 @@
 import React from 'react';
 import './Landing.css';
-
+import { Header } from '../components/Header/Header';
 export const Landing = () => {
   return (
+    
     <div className="landing-page">
       <div className="container">
         {/* Header Section */}

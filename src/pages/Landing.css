@@ -467,17 +467,19 @@ landing_1 img {
  .contact-content {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; 
+  flex-wrap: nowrap;
+  gap: 2rem;
 }
 
+/* Large screens */
 .contact-form {
-  flex: 0 0 30%;  
-
+  flex: 0 0 40%;
+  max-width: 40%;
 }
 
 .contact-image {
-  flex: 0 0 70%;  
-  width:100%;
+  flex: 0 0 60%;
+  max-width: 60%;
   margin-bottom: 6rem;
 }
 
@@ -505,10 +507,16 @@ landing_1 img {
 
   /* Contact content stack */
   .contact-content {
-    flex-direction: column !important;
-    gap: 1.5rem;
+    flex-direction: column;
+    flex-wrap: nowrap;
   }
 
+  .contact-form, 
+  .contact-image {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 2rem; /* give some space between form and image */
+  }
   /* Make sure images fit nicely */
   .landing_1 img,
   .landing-about-img,
@@ -603,4 +611,5 @@ landing_1 img {
   .landing_1_wrapper {
     position: static; /* Reset container position */
   }
+
 }
