@@ -44,13 +44,19 @@ export const Our_project = () => {
         </div>
       </div>
 
-      <div className="pagination">
-        <span className="page-number">0</span>
-        <span className="slash">/</span>
-        <span className="total-pages">05</span>
-        <button className="pagination-btn" disabled>←</button>
-        <button className="pagination-btn" disabled>→</button>
-      </div>
+      <div className='lower_gallery'>
+      <div className='number_text'>
+                <p>0 <br/>1</p>
+                <p className='slash'>/</p>
+                <p>05</p>
+              </div>    
+      <div className='arrow_btn'>
+            <button className='arrow_1'>←</button>
+            <button className='arrow_2'>→</button>
+            </div>
+            
+     
+     </div>
     </section>
   )
 }

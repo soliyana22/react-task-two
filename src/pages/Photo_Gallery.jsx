@@ -1,7 +1,6 @@
 import React from 'react'
 import './PhotoGallery.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faArrowLeft,faArrowRight} from '@fortawesome/free-solid-svg-icons';
+
 
 export const Photo_Gallery = () => {
    const images = [

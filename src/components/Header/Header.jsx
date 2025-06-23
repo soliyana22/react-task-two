@@ -1,24 +1,33 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Header.css';
 
 export const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleToggle = () => {
+    setMenuOpen(prev => !prev);
+  };
+
   return (
     <nav className="navbar">
-      <div className='header'>
-        <img src="assets/images/logo.png" alt="logo image" className='logo'/>
+      <div className="header">
+        <img src="assets/images/logo.png" alt="logo" className="logo" />
       </div>
-      <ul className="nav-list">
-        <li><NavLink to="/" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>MAIN</NavLink></li>
-        <li><NavLink to="/photogallery" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Gallery</NavLink></li>
-        <li><NavLink to="/ourproject" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Project</NavLink></li>
-        <li><NavLink to="/certifications" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Certifications</NavLink></li>
-        <li><NavLink to="/contact" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Contacts</NavLink></li>
-        </ul>
+
+      <div className="hamburger" onClick={handleToggle}>
+        <span className="bar"></span>
+        <span className="bar"></span>
+        <span className="bar"></span>
+      </div>
+
+      <ul className={`nav-list ${menuOpen ? 'open' : ''}`}>
+        <li><NavLink to="/" className="nav-link">MAIN</NavLink></li>
+        <li><NavLink to="/photogallery" className="nav-link">Gallery</NavLink></li>
+        <li><NavLink to="/ourproject" className="nav-link">Project</NavLink></li>
+        <li><NavLink to="/certifications" className="nav-link">Certifications</NavLink></li>
+        <li><NavLink to="/contact" className="nav-link">Contacts</NavLink></li>
+      </ul>
     </nav>
-  )
-}
-
-
-
+  );
+};
