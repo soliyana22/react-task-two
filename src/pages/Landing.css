@@ -462,83 +462,106 @@ body {
 }
 
 /* Media Queries for Desktop */
-@media (min-width: 992px) {
-  .landing-title p {
-    font-size: 3rem;
-  }
-  
-  .landing-about-title {
-    font-size: 2.5rem;
-  }
-  
-  .landing-mission-title {
-    font-size: 64px;
-  }
-  
-  .projects-title, 
-  .contact-title {
-    font-size: 3rem;
-    justify-content: flex-start;
-  }
-  
-  .landing-about-text,
-  .landing-mission-text {
-    font-size: 1.02rem;
-    text-align: justify;
-  }
-}
 @media (max-width: 768px) {
   /* Stack header section vertically */
   .landing-header {
     flex-direction: column !important;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
-  /* Stack mission points */
+  /* Mission points stack vertically */
   .landing-mission-points {
     flex-direction: column !important;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
-  /* Stack about section */
+  /* About section stack */
   .landing-about-section {
     flex-direction: column !important;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
-  /* Stack contact section */
+  /* Contact content stack */
   .contact-content {
     flex-direction: column !important;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
-  /* Full width images on smaller screens */
+  /* Make sure images fit nicely */
   .landing_1 img,
-  .landing-about-image,
-  .contact-image img {
+  .landing-about-img,
+  .landing-about-img_3,
+  .contact-image img,
+  .project-image {
     width: 100% !important;
     height: auto;
-    max-height: none;
     object-fit: cover;
   }
 
-  /* Adjust project grids */
+  /* Project grids one per row */
   .top-row,
   .bottom-row {
     grid-template-columns: 1fr !important;
   }
 
-  /* Fix wide buttons */
+  /* Buttons full width but reasonable max width */
   .landing_btn_1 button,
   .all-projects-button,
-  .contact-button {
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
+  .contact-button,
+  .landing-about-btn {
+    width: 90%;
+    max-width: 320px;
+    margin: 1rem auto;
     display: block;
+    padding: 1rem;
   }
 
-  /* Padding/margins for better spacing */
+  /* Reduce title font sizes for mobile */
+  .landing-title p {
+    font-size: 1.5rem;
+  }
+
+  .landing-title h1 {
+    font-size: 2rem;
+  }
+
+  .landing-mission-title,
+  .projects-title,
+  .contact-title,
+  .landing-about-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .overlay-title {
+    font-size: 2rem;
+    line-height: 2.2rem;
+    margin-left: 0;
+  }
+
+  .overlay-button {
+    margin-left: 0;
+  }
+
+  /* Remove excessive margin on number_text */
+  .number_text p {
+    margin-top: 1rem;
+  }
+
+  .arrow_btn {
+    margin-top: 2rem;
+  }
+
+  /* Fix contact form width */
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-image {
+    width: 100%;
+  }
+
+  /* Adjust container padding */
   .container {
     padding: 0 1rem;
   }
