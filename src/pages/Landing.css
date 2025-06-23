@@ -400,6 +400,28 @@ body {
 .contact-button:hover {
   background-color: #444;
 }
+landing_1 img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-height: 580px;
+  object-fit: cover;
+}
+
+/* Default: Button is absolutely positioned on the image */
+.landing_btn_1 button {
+  position: absolute;
+  background-color: white;
+  color: black;
+  border: none;
+  bottom: 2rem;
+  padding: 1.5rem 3rem;
+}
+
+/* New container to help with layout for smaller screens */
+.landing_1_wrapper {
+  position: relative; /* keeps button positioned on image by default */
+}
 
 /* Media Queries for Tablet */
 @media (min-width: 768px) {
@@ -564,5 +586,21 @@ body {
   /* Adjust container padding */
   .container {
     padding: 0 1rem;
+  }
+  .landing_btn_1 button {
+    position: static;     /* Reset absolute */
+    width: 100%;          /* Make it wide if you want */
+    margin-top: 1rem;
+    padding: 1rem;
+    display: block;
+  }
+
+  .landing_btn_1 {
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .landing_1_wrapper {
+    position: static; /* Reset container position */
   }
 }
