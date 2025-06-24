@@ -407,13 +407,13 @@ landing_1 img {
   object-fit: cover;
 }
 
-/* Default: Button is absolutely positioned on the image */
+
 .landing_btn_1 button {
   position: absolute;
   background-color: white;
   color: black;
   border: 1px;
-  bottom: 1rem;
+  bottom: 2rem;
   padding: 2rem 3.5rem;
 }
 
