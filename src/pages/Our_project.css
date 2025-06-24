@@ -148,6 +148,7 @@
   font-weight: 400;
   color: #999;
   margin-bottom: 1rem;
+  text-align: justify;
 }
 
 .project-info p {
@@ -156,9 +157,12 @@
   margin-bottom: 1.25rem;
   line-height: 1.5;
 }
+.btn-container {
+  text-align: left;
+}
 
 .view-more-btn {
-  padding: 0.5rem 1rem;
+  padding: 1.5rem 2rem;
   background-color: #fff;
   text-transform: uppercase;
   font-size: 0.75rem;
@@ -166,7 +170,8 @@
   cursor: pointer;
   transition: background-color 0.3s;
   color:black;
-  text-align: left;
+  border:1px solid transparent;
+
 }
 
 
@@ -284,5 +289,78 @@
     width: 120px; 
     padding: 0.5rem 0.75rem; 
     font-size: 0.7rem; 
+  }
+}
+/* Tablet responsiveness: 768px - 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .our-projects-section {
+    padding: 3rem 1.5rem;
+    max-width: 90%;
+  }
+
+  .our-projects-title {
+    font-size: 2.4rem;
+    line-height: 2.5rem;
+    text-align: left;
+  }
+
+  .project-item {
+    flex-direction: column;  /* Stack vertically for tablet */
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .project-img {
+    width: 100%;  /* Image takes full width */
+    height: auto;
+  }
+
+  .project-info {
+    width: 100%;   /* Make sure text takes full width */
+    padding: 2rem; /* Nice roomy padding for readability */
+  }
+
+  .project-info h3 {
+    font-size: 1.5rem; /* Slightly larger on tablet for easier reading */
+  }
+
+  .project-info p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+  }
+
+  .view-more-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.85rem;
+    width: auto; /* Don't force width — let button size naturally */
+  }
+
+  .lower_gallery {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 0;
+    margin-top: 2rem;
+    align-items: center;
+  }
+
+  .number_text {
+    gap: 2rem;
+    margin-right: 2rem;
+  }
+
+  .number_text p {
+    font-size: 18px;
+    margin-top: 3rem;
+  }
+
+  .arrow_btn {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .arrow_1, .arrow_2 {
+    padding: 0.5rem 1rem;
+    margin: 0;
   }
 }
