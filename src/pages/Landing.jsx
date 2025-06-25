@@ -23,6 +23,7 @@ export const Landing = () => {
               </div>
           
           </div>
+    
           <div className='landing_1'>
             <img src="../assets/images/Landing_1.jpg" alt="Landing header" />
           </div>
@@ -31,7 +32,7 @@ export const Landing = () => {
             
             <button>VIEW MORE → </button>
           </div>
-        
+     
         
         {/* About Section */}
         <div className="landing-about-section">
@@ -87,7 +88,7 @@ export const Landing = () => {
          
           <div className="projects-grid top-row">
             <div className="project-container">
-              <img src="../assets/images/landing_new_2.png" alt="Sample Project" className="project-image" />
+              <img src="../assets/images/Landing_4.png" alt="Sample Project" className="project-image_1" />
               <div className="overlay">
                 <h3 className="overlay-title">Sample <br/>Project</h3>
                 <button className="overlay-button">VIEW MORE →</button>
